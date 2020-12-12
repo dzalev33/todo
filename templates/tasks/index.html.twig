@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block title %}Simple TODO List{% endblock %}
+
+
+{% block body %}
+    {% if tasks %}
+   <table class="table table-striped">
+<thead>
+<tr>
+    <th>Task Title</th>
+    <th>Actions</th>
+</tr>
+</thead>
+       <tbody>
+            {% for task in tasks %}
+                <tr>
+                    <td>{{ task }}</td>
+                    <td>
+                        <a href="/task/1" class="btn btn-dark">Show</a>
+                    </td>
+                </tr>
+            {% endfor %}
+       </tbody>
+   </table>
+        {% else %}
+<p>no tasks available</p>
+    {% endif %}
+{% endblock %}
