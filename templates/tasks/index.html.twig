@@ -14,9 +14,9 @@
        <tbody>
             {% for task in tasks %}
                 <tr>
-                    <td>{{ task }}</td>
+                    <td>{{ task.title }}</td>
                     <td>
-                        <a href="/task/1" class="btn btn-dark">Show</a>
+                        <a href="/task/{{ task.id }}" class="btn btn-dark">Show</a>
                     </td>
                 </tr>
             {% endfor %}

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ task.title }}{% endblock %}
+
+
+{% block body %}
+<h1>{{ task.title }}</h1>
+    <p>{{ task.body }}</p>
+
+    <hr>
+    <a href="/">Go Back</a>
+
+{% endblock %}
